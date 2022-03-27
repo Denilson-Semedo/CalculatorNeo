@@ -1,0 +1,76 @@
+h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-size: larger;
+}
+
+.inputField{
+    border-radius: 8px;
+    height: 59px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.inputField:focus{
+    border: none;
+}
+
+#main{
+    display: grid;
+    justify-content: center;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    margin-right: 8px;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+    outline: none;
+    background-color: #EBECF0;
+}
+
+input:focus {
+    box-shadow:  inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
+}
+
+.inputButtom{
+    height: 75px;
+    width: 75px;
+    border-radius: 8px;
+    background: #EBECF0;
+    box-shadow:  5px 5px 10px #BABECC,
+                -5px -5px 10px #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+  font-weight: 600;
+}
+
+/*.inputButtom:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
+}*/
+  
+.inputButtom:active {
+    box-shadow: inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
