@@ -9,15 +9,14 @@
 
         <div class="btn">
             <div class="fila1">
-                <input class="inputButtom" [(ngModel)]="op" [ngClass]="['bntStyle']" type="submit" value="%" (click)="setOp('%')">&nbsp;
                 <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="CE">&nbsp;
                 <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="C" >&nbsp;
-                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value=">X">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="⊗">&nbsp;
             </div>
             <div class="fila2">
-                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="1/x" (click)="setOp('1/x')">&nbsp;
-                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="x2" (click)="setOp('x2')">&nbsp;
-                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="2vx" (click)="setOp('2vx')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="⅟x" (click)="setOp('espDiv')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="x²" (click)="setOp('quadrado')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="√" (click)="setOp('raiz')">&nbsp;
                 <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="/" (click)="setOp('/')">&nbsp;
             </div>
             <div class="fila3">
