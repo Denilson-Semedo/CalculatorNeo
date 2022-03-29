@@ -8,26 +8,63 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title = 'calculadora_final';
-  input1 = "";
-  input2 = "";
-  result = 0;
-  num1=0;
-  num2=0;
+  inputField = "0";
+  LastValue = "";
+  op = "";
+  showCalc = "";
+  stat = "initial";
 
-  sum():void{
-    this.result = parseInt(this.input1) + parseInt(this.input2)
+  setOp(x: string): void {
+    this.op = x;
+    this.LastValue = this.inputField;
+    this.showCalc = this.LastValue + " " + this.op;
   }
 
-  sub():void{
-    this.result = parseInt(this.input1) - parseInt(this.input2)
+  addVal(val: string): void{
+    if (this.stat == "inital") {
+      this.inputField = this.inputField + val;
+    } else {
+      this.inputField = val;
+    }
   }
 
-  mult():void{
-    this.result = parseInt(this.input1) * parseInt(this.input2)
+  calc(): void {
+    switch (this.op) {
+      case "+":
+        this.sum();
+        break;
+      case "-":
+        this.sub();
+        break;
+      case "*":
+        this.mult();
+        break;
+      case "/":
+        this.div();
+        break;
+      default:
+        break;
+    }
   }
 
-  div():void{
-    this.result = parseInt(this.input1) / parseInt(this.input2)
+  sum(): void {
+    this.showCalc = this.LastValue + " + " + this.inputField;
+    this.inputField = String(parseInt(this.LastValue) + parseInt(this.inputField))
+  }
+
+  sub(): void {
+    this.inputField = String(parseInt(this.LastValue) - parseInt(this.inputField))
+  }
+
+  mult(): void {
+    this.inputField = String(parseInt(this.LastValue) * parseInt(this.inputField))
+  }
+
+  div(): void {
+    this.inputField = String(parseInt(this.LastValue) / parseInt(this.inputField))
+  }
+
+  negativo(): void {
+    this.inputField = String(-1 * parseInt(this.inputField));
   }
 }

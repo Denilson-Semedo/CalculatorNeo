@@ -8,15 +8,12 @@ form{
     font-size: larger;
 }
 
-.inputField{
+.monitor{
     border-radius: 8px;
-    height: 59px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-.inputField:focus{
-    border: none;
+    height: 89px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
 }
 
 #main{
@@ -26,7 +23,7 @@ form{
 
 .btn{
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: space-around;
 }
 
@@ -52,8 +49,8 @@ input:focus {
 }
 
 .inputButtom{
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     border-radius: 8px;
     background: #EBECF0;
     box-shadow:  5px 5px 10px #BABECC,
@@ -61,7 +58,8 @@ input:focus {
     border: none;
     font-size: 28px;
     cursor: pointer;
-  font-weight: 600;
+    font-weight: 600;
+    margin: 5px;
 }
 
 /*.inputButtom:hover {
