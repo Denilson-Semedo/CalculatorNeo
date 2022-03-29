@@ -15,18 +15,24 @@ export class AppComponent {
   stat = "initial";
 
   setOp(x: string): void {
-     
     this.op = x;
     this.LastValue = this.inputField;
     this.showCalc = this.LastValue + " " + this.op;
   }
 
-  addVal(val: string): void{
+  addVal(val: string): void {
     if (this.stat == "inital") {
       this.inputField = this.inputField + val;
     } else {
       this.inputField = val;
     }
+  }
+  clear(): void {
+    this.inputField = "0";
+    this.LastValue = "";
+    this.op = "";
+    this.showCalc = "";
+    this.stat = "initial";
   }
 
   calc(): void {
@@ -42,18 +48,6 @@ export class AppComponent {
         break;
       case "/":
         this.div();
-        break;
-        case "%":
-        this.percent();
-        break;
-        case "espDiv":
-          this.espDiv();
-          break;
-          case "quadrado":
-        this.quadrado();
-        break;
-        case "raiz":
-        this.raiz();
         break;
       default:
         break;
@@ -76,9 +70,6 @@ export class AppComponent {
   div(): void {
     this.inputField = String(parseInt(this.LastValue) / parseInt(this.inputField))
   }
-  percent(): void {
-
-  }
 
   espDiv(): void {
     this.inputField = String(1 / parseInt(this.inputField))
@@ -87,8 +78,8 @@ export class AppComponent {
   quadrado(): void {
     this.inputField = String(parseInt(this.inputField) * parseInt(this.inputField))
   }
-  
-  raiz(): void{
+
+  raiz(): void {
     this.inputField = String(Math.sqrt(parseInt(this.inputField)))
   }
 

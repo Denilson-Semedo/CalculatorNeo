@@ -44,9 +44,9 @@ input[type="text"]
     background-color: #EBECF0;
 }
 
-input:focus {
+/*input:focus {
     box-shadow:  inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
-}
+}*/
 
 .inputButtom{
     height: 65px;
@@ -62,13 +62,35 @@ input:focus {
     margin: 5px;
 }
 
+.inputButtomLarge{
+    height: 65px;
+    width: 150px;
+    border-radius: 8px;
+    background: #EBECF0;
+    box-shadow:  5px 5px 10px #BABECC,
+                -5px -5px 10px #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px;
+}
+
 /*.inputButtom:hover {
     box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
 }*/
   
-.inputButtom:active {
+.inputButtom:active, .inputButtomLarge:active{
     box-shadow: inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
     margin-top: 5px;
     margin-left: 5px;
 }
+
+.monitor{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+
 
