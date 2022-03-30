@@ -70,32 +70,41 @@ export class AppComponent {
 
 
   sum(): void {
-    this.showCalc = this.LastValue + " + " + this.inputField;
     this.inputField = String(parseInt(this.LastValue) + parseInt(this.inputField))
+    this.showCalc = this.showCalc + this.inputField + " = ";
   }
 
   sub(): void {
     this.inputField = String(parseInt(this.LastValue) - parseInt(this.inputField))
+    this.showCalc = this.showCalc + this.inputField + " = ";
   }
 
   mult(): void {
     this.inputField = String(parseInt(this.LastValue) * parseInt(this.inputField))
+    this.showCalc = this.showCalc + this.inputField + " = ";
   }
 
   div(): void {
     this.inputField = String(parseInt(this.LastValue) / parseInt(this.inputField))
+    this.showCalc = this.showCalc + this.inputField + " = ";
   }
 
   espDiv(): void {
+    this.showCalc = this.inputField;
     this.inputField = String(1 / parseInt(this.inputField))
+    this.showCalc = " 1/" + this.showCalc + " = ";
   }
 
   quadrado(): void {
+    this.showCalc = this.inputField;
     this.inputField = String(parseInt(this.inputField) * parseInt(this.inputField))
+    this.showCalc = this.showCalc + "²";
   }
 
   raiz(): void {
+    this.showCalc = this.inputField;
     this.inputField = String(Math.sqrt(parseInt(this.inputField)))
+    this.showCalc = "sqrt(" + this.showCalc + ")";
   }
 
   negativo(): void {

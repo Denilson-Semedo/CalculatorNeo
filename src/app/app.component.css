@@ -55,10 +55,6 @@ input[type="text"]
     background-color: #EBECF0;
 }
 
-/*input:focus {
-    box-shadow:  inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
-}*/
-
 .inputButtom{
     height: 65px;
     width: 65px;
@@ -86,10 +82,6 @@ input[type="text"]
     font-weight: 600;
     margin: 5px;
 }
-
-/*.inputButtom:hover {
-    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
-}*/
   
 .inputButtom:active, .inputButtomLarge:active{
     box-shadow: inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
