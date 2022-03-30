@@ -17,7 +17,7 @@ export class AppComponent {
   setOp(x: string): void {
     this.op = x;
     this.LastValue = this.inputField;
-    this.showCalc = this.LastValue + " " + this.op;
+    this.showCalc = this.LastValue + " " + this.op + " ";
     this.stat = false;
   }
 
@@ -68,25 +68,24 @@ export class AppComponent {
     }
   }
 
-
   sum(): void {
-    this.inputField = String(parseInt(this.LastValue) + parseInt(this.inputField))
     this.showCalc = this.showCalc + this.inputField + " = ";
+    this.inputField = String(parseInt(this.LastValue) + parseInt(this.inputField))
   }
 
   sub(): void {
-    this.inputField = String(parseInt(this.LastValue) - parseInt(this.inputField))
     this.showCalc = this.showCalc + this.inputField + " = ";
+    this.inputField = String(parseInt(this.LastValue) - parseInt(this.inputField))
   }
 
   mult(): void {
-    this.inputField = String(parseInt(this.LastValue) * parseInt(this.inputField))
     this.showCalc = this.showCalc + this.inputField + " = ";
+    this.inputField = String(parseInt(this.LastValue) * parseInt(this.inputField))
   }
 
   div(): void {
-    this.inputField = String(parseInt(this.LastValue) / parseInt(this.inputField))
     this.showCalc = this.showCalc + this.inputField + " = ";
+    this.inputField = String(parseInt(this.LastValue) / parseInt(this.inputField))
   }
 
   espDiv(): void {
