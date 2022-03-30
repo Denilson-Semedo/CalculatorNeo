@@ -29,12 +29,18 @@ export class AppComponent {
       this.inputField = this.inputField + val;
     }
   }
+
   clear(): void {
     this.inputField = "0";
     this.LastValue = "";
     this.op = "";
     this.showCalc = "";
     this.stat = false;
+  }
+
+  delet(): void {
+    this.inputField = this.inputField.slice(0,this.inputField.length - 1);
+    //str = str.slice(0,str.length - 1);
   }
 
   calc(): void {
