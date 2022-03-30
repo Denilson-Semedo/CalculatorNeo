@@ -12,19 +12,21 @@ export class AppComponent {
   LastValue = "";
   op = "";
   showCalc = "";
-  stat = "initial";
+  stat = false;
 
   setOp(x: string): void {
     this.op = x;
     this.LastValue = this.inputField;
     this.showCalc = this.LastValue + " " + this.op;
+    this.stat = false;
   }
 
   addVal(val: string): void {
-    if (this.stat == "inital") {
-      this.inputField = this.inputField + val;
-    } else {
+    if (this.stat == false) {
       this.inputField = val;
+      this.stat = true;
+    } else {
+      this.inputField = this.inputField + val;
     }
   }
   clear(): void {
@@ -32,27 +34,34 @@ export class AppComponent {
     this.LastValue = "";
     this.op = "";
     this.showCalc = "";
-    this.stat = "initial";
+    this.stat = false;
   }
 
   calc(): void {
-    switch (this.op) {
-      case "+":
-        this.sum();
-        break;
-      case "-":
-        this.sub();
-        break;
-      case "*":
-        this.mult();
-        break;
-      case "/":
-        this.div();
-        break;
-      default:
-        break;
+    if (this.stat == true) {
+      switch (this.op) {
+        case "+":
+          this.sum();
+          this.stat = false;
+          break;
+        case "-":
+          this.sub();
+          this.stat = false;
+          break;
+        case "*":
+          this.mult();
+          this.stat = false;
+          break;
+        case "/":
+          this.div();
+          this.stat = false;
+          break;
+        default:
+          break;
+      }
     }
   }
+
 
   sum(): void {
     this.showCalc = this.LastValue + " + " + this.inputField;
