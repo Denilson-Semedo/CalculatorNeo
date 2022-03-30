@@ -1,0 +1,92 @@
+form{
+    font-size: larger;
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+}
+
+.monitor{
+    border-radius: 8px;
+    height: 89px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+#result{
+    font-size: 32px;
+    margin-top: 13px
+}
+
+#calculation{
+    color: #898989; 
+    font-size:18px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#main{
+    display: grid;
+    justify-content: center;
+}
+
+.btn{
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+}
+
+input {
+    margin-right: 8px;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+    outline: none;
+    background-color: #EBECF0;
+}
+
+.inputButtom{
+    height: 65px;
+    width: 65px;
+    border-radius: 8px;
+    background: #EBECF0;
+    box-shadow:  5px 5px 10px #BABECC,
+                -5px -5px 10px #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.inputButtomLarge{
+    height: 65px;
+    width: 150px;
+    border-radius: 8px;
+    background: #EBECF0;
+    box-shadow:  5px 5px 10px #BABECC,
+                -5px -5px 10px #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px;
+}
+  
+.inputButtom:active, .inputButtomLarge:active{
+    box-shadow: inset 5px 5px 10px #BABECC, inset -5px -5px 10px #fff;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+

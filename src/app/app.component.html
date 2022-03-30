@@ -1,0 +1,48 @@
+<div id="main">
+    <form style="margin-top:10px;">
+        <!--<p style="margin-top:50px; font-size:24px;">Result: {{result}}</p>-->
+        <div class="monitor">
+            <p id="calculation">{{showCalc}}</p>
+            <p id="result">{{inputField}}</p>
+        </div>
+        <!--<input class="inputField" type="text" [(ngModel)]="inputField" name="input2"><br /><br /> -->
+
+        <div class="btn">
+            <div class="fila1">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="CE" (click)="clear()">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="C" (click)="clear()">&nbsp;
+                <input class="inputButtomLarge" [ngClass]="['bntStyle']" type="submit" value="⊗" (click)="delet()">&nbsp;
+            </div>
+            <div class="fila2">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="⅟x" (click)="espDiv()">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="x²" (click)="quadrado()">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="√" (click)="raiz()">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="/" (click)="setOp('/')">&nbsp;
+            </div>
+            <div class="fila3">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="7" (click)="addVal('7')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="8" (click)="addVal('8')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="9" (click)="addVal('9')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="x" (click)="setOp('*')">&nbsp;
+            </div>
+            <div class="fila4">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="4" (click)="addVal('4')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="5" (click)="addVal('5')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="6" (click)="addVal('6')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="-" (click)="setOp('-')">&nbsp;
+            </div>
+            <div class="fila5">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="1" (click)="addVal('1')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="2" (click)="addVal('2')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="3" (click)="addVal('3')">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="+" (click)="setOp('+')">&nbsp;
+            </div>
+            <div class="fila6">
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="+/-" (click)="negativo()">&nbsp;
+                <input class="inputButtom" [ngClass]="['bntStyle']" type="submit" value="0" (click)="addVal('0')">&nbsp;
+                <input class="inputButtomLarge" [ngClass]="['bntStyle']" type="submit" value="=" (click)="calc()">&nbsp;
+            </div>
+            <br />
+        </div>
+    </form>
+</div>
