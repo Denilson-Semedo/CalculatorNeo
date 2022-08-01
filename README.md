@@ -34,4 +34,4 @@ For this project i was exploring a data binding property. <br />
 
 ![image](https://user-images.githubusercontent.com/55548914/160902386-127ae6ed-9bd8-4156-9edf-113ab81db271.png) <br />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+This project was generated and build with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
